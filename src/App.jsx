@@ -59,7 +59,7 @@ function ProjectImage({ type }) {
 function App() {
   const [isLight, setIsLight] = useState(false);
   const stopControls = (event) => {
-    if (event.target.closest(".submit-btn")) {
+    if (event.target.closest(".submit-btn, .sun-btn")) {
       return;
     }
 
