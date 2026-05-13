@@ -669,20 +669,24 @@ footer {
 .light-theme .grid-glow {
   opacity: .7;
   background-image:
-    linear-gradient(rgba(0, 0, 0, .065) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, .065) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.065) 1px, transparent 1px);
 }
 
 .light-theme .service-card {
-  border-color: rgba(0, 0, 0, .12);
+  border-color: rgba(0, 0, 0, 0.12);
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, .92), rgba(235, 235, 235, .78)),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(235, 235, 235, 0.78)
+    ),
     #fff;
 }
 
 .light-theme .chips button,
 .light-theme .view-btn {
-  border-color: rgba(0, 0, 0, .18);
+  border-color: rgba(0, 0, 0, 0.18);
   color: #191919;
 }
 
@@ -708,7 +712,7 @@ footer {
 }
 
 .light-theme .footer-bottom {
-  border-top-color: rgba(0, 0, 0, .16);
+  border-top-color: rgba(0, 0, 0, 0.16);
 }
 
 .light-theme .mail-pill {
