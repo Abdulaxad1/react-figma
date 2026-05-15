@@ -667,7 +667,7 @@ footer {
 }
 
 .light-theme .grid-glow {
-  opacity: .7;
+  opacity: 0.7;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.065) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.065) 1px, transparent 1px);
@@ -964,5 +964,572 @@ footer {
 
   .footer-top h2 {
     font-size: 31px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav,
+  footer {
+    width: min(100% - 40px, 980px);
+  }
+
+  .nav nav {
+    gap: 32px;
+  }
+
+  .nav-actions {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 22px;
+    align-items: center;
+  }
+
+  .nav nav {
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: 18px 34px;
+  }
+
+  .nav-actions {
+    justify-self: end;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 58px 20px 105px;
+  }
+
+  .grid-glow {
+    width: min(720px, 120vw);
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 7vw, 51px);
+  }
+
+  .hero p {
+    max-width: 600px;
+  }
+
+  .about {
+    padding: 82px 24px 115px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card.wide {
+    grid-column: span 2;
+  }
+
+  .projects {
+    padding-top: 120px;
+  }
+
+  .chips {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 52px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 46px 28px;
+  }
+
+  .project-image {
+    height: auto;
+    aspect-ratio: 1.65;
+  }
+
+  .contact {
+    padding: 96px 0 120px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav,
+  footer,
+  .services,
+  .projects,
+  .contact {
+    width: min(100% - 28px, 520px);
+  }
+
+  .nav {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  .nav nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+    gap: 14px 10px;
+  }
+
+  .nav-actions {
+    justify-self: center;
+    gap: 22px;
+  }
+
+  .hero {
+    padding: 44px 14px 84px;
+  }
+
+  .grid-glow {
+    top: 18px;
+    width: 520px;
+    height: 360px;
+    background-size: 42px 42px;
+  }
+
+  .avatar {
+    width: 128px;
+    height: 128px;
+  }
+
+  .hero h1 {
+    margin-top: 24px;
+    font-size: clamp(32px, 10vw, 40px);
+  }
+
+  .hero h2 {
+    font-size: 17px;
+  }
+
+  .hero p,
+  .about p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .about {
+    padding: 64px 14px 88px;
+  }
+
+  .about h2,
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .service-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .service-card.wide {
+    min-height: auto;
+  }
+
+  .service-card.wide {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .brain-art {
+    min-height: 160px;
+  }
+
+  .projects {
+    padding-top: 88px;
+  }
+
+  .chips button,
+  .chips .selected {
+    flex: 1 1 135px;
+    min-width: 0;
+    padding: 0 12px;
+  }
+
+  .project-image {
+    aspect-ratio: 1.55;
+  }
+
+  .project-row {
+    align-items: flex-start;
+  }
+
+  .contact {
+    padding: 76px 0 92px;
+  }
+
+  .contact form {
+    margin-top: 34px;
+  }
+
+  .contact input,
+  .contact select {
+    min-height: 52px;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-top {
+    padding-bottom: 40px;
+  }
+
+  .footer-top h2 {
+    width: 100%;
+    font-size: clamp(30px, 9vw, 38px);
+  }
+
+  .mail-pill {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav nav a {
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar {
+    width: 116px;
+    height: 116px;
+  }
+
+  .hero {
+    padding-bottom: 72px;
+  }
+
+  .service-card {
+    padding: 22px 18px;
+  }
+
+  .service-card h3 {
+    margin: 18px 0 14px;
+  }
+
+  .project-card h3 {
+    font-size: 14px;
+  }
+
+  .project-card p {
+    margin-top: 10px;
+  }
+
+  .contact label {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav,
+  footer,
+  .services,
+  .projects,
+  .contact {
+    width: min(100% - 20px, 340px);
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .nav-actions {
+    gap: 14px;
+  }
+
+  .outline-btn {
+    min-width: 88px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .chips button,
+  .chips .selected {
+    flex-basis: 100%;
+  }
+
+  .project-image {
+    aspect-ratio: 1.35;
+  }
+
+  .mail-pill {
+    padding: 0 14px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav,
+  footer {
+    width: min(100% - 120px, 1320px);
+  }
+
+  .services,
+  .projects {
+    width: min(100% - 120px, 1115px);
+  }
+
+  .contact {
+    width: min(100% - 120px, 590px);
+  }
+
+  .hero {
+    min-height: 690px;
+  }
+
+  .about {
+    max-width: 900px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .service-card {
+    min-height: 215px;
+  }
+
+  .service-card.wide {
+    grid-column: span 2;
+    grid-template-columns: 1fr 230px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 62px 38px;
+  }
+
+  .project-image {
+    height: auto;
+    aspect-ratio: 1.78;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    max-width: 720px;
+    font-size: 17px;
+  }
+
+  .about h2,
+  .section-title h2 {
+    font-size: 43px;
+  }
+
+  .service-card h3 {
+    font-size: 13px;
+  }
+
+  .service-card p {
+    font-size: 11px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+  }
+}
+
+/* Fluid responsive layer: keeps the page proportional at any viewport width. */
+.portfolio {
+  --page-pad: clamp(16px, 6vw, 120px);
+  --section-pad: clamp(70px, 10vw, 150px);
+  --tight-pad: clamp(38px, 7vw, 92px);
+}
+
+.nav,
+footer {
+  width: min(calc(100% - (var(--page-pad) * 2)), 1320px);
+}
+
+.services,
+.projects {
+  width: min(calc(100% - (var(--page-pad) * 2)), 1115px);
+}
+
+.contact {
+  width: min(calc(100% - (var(--page-pad) * 2)), 590px);
+}
+
+.nav {
+  gap: clamp(14px, 3vw, 52px);
+}
+
+.nav nav {
+  gap: clamp(14px, 3.2vw, 52px);
+}
+
+.nav-actions {
+  gap: clamp(16px, 5vw, 108px);
+}
+
+.hero {
+  min-height: clamp(520px, 68vw, 720px);
+  padding-top: clamp(46px, 8vw, 92px);
+}
+
+.grid-glow {
+  width: min(82vw, 775px);
+  height: clamp(300px, 42vw, 475px);
+  background-size: clamp(38px, 5vw, 64px) clamp(38px, 5vw, 64px);
+}
+
+.avatar {
+  width: clamp(112px, 14vw, 165px);
+  height: clamp(112px, 14vw, 165px);
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5.2vw, 56px);
+}
+
+.hero h2 {
+  font-size: clamp(17px, 2.2vw, 22px);
+}
+
+.hero p {
+  max-width: min(650px, 92vw);
+  font-size: clamp(13px, 1.5vw, 16px);
+}
+
+.about {
+  max-width: min(900px, calc(100% - (var(--page-pad) * 2)));
+  padding: var(--tight-pad) 0 var(--section-pad);
+}
+
+.about h2,
+.section-title h2 {
+  font-size: clamp(30px, 4vw, 43px);
+}
+
+.about p {
+  font-size: clamp(12px, 1.3vw, 13px);
+}
+
+.service-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(16px, 2.4vw, 25px);
+  margin-top: clamp(34px, 5vw, 58px);
+}
+
+.service-card {
+  min-height: auto;
+  padding: clamp(22px, 3vw, 30px);
+}
+
+.service-card.wide {
+  grid-column: span 2;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 230px);
+}
+
+.service-card h3 {
+  font-size: clamp(12px, 1.1vw, 14px);
+}
+
+.service-card p {
+  font-size: clamp(10px, 0.95vw, 11px);
+}
+
+.projects {
+  padding-top: var(--section-pad);
+}
+
+.chips {
+  flex-wrap: wrap;
+  gap: clamp(10px, 3vw, 45px);
+  margin-bottom: clamp(38px, 6vw, 65px);
+}
+
+.chips button,
+.chips .selected {
+  min-width: clamp(112px, 12vw, 150px);
+}
+
+.project-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(34px, 5vw, 62px) clamp(20px, 3vw, 38px);
+}
+
+.project-image {
+  height: auto;
+  aspect-ratio: 1.78;
+}
+
+.project-card h3 {
+  font-size: clamp(14px, 1.3vw, 16px);
+}
+
+.contact {
+  padding: var(--section-pad) 0 var(--section-pad);
+}
+
+.contact form {
+  margin-top: clamp(34px, 5vw, 60px);
+}
+
+.footer-top {
+  gap: clamp(22px, 5vw, 80px);
+}
+
+.footer-top h2 {
+  font-size: clamp(31px, 4.5vw, 50px);
+}
+
+@media (max-width: 760px) {
+  .service-card.wide {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .nav nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chips button,
+  .chips .selected {
+    min-width: 0;
+    flex: 1 1 140px;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
   }
 }
